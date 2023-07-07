@@ -295,6 +295,7 @@ static redisConfig *getRedisConfig(const char *ip, int port,
     redisContext *c = NULL;
     redisReply *reply = NULL, *sub_reply = NULL;
     c = getRedisContext(ip, port, hostsocket);
+    usleep(1000000);
     if (c == NULL) {
         freeRedisConfig(cfg);
         return NULL;

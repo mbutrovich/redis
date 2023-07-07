@@ -8205,6 +8205,7 @@ int main(int argc, char **argv) {
     /* Latency mode */
     if (config.latency_mode) {
         if (cliConnect(0) == REDIS_ERR) exit(1);
+        usleep(1000000);
         latencyMode();
     }
 
